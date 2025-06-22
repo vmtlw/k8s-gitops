@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: matrix-synapse
-  namespace: matrix-synapse
+  namespace: argocd
 spec:
   project: default
   source:
@@ -15,7 +15,7 @@ spec:
         - values.yml
   destination:
     server: https://kubernetes.default.svc
-    namespace: monitoring
+    namespace: matrix-synapse
   syncPolicy:
     automated:
       prune: true
