@@ -15,7 +15,7 @@ spec:
     helm:
       releaseName: wikijs
       valueFiles:
-        - name: values.yml
+        - values.yml
   destination:
     server: https://kubernetes.default.svc
     namespace: wikijs
