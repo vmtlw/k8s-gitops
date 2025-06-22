@@ -1,2 +1,3 @@
-postgresql:
-  ssl: false
+wiki:
+  postgresql:
+    ssl: false
