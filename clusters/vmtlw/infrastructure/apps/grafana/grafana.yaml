@@ -11,8 +11,8 @@ spec:
     targetRevision: 9.2.7
     helm:
       releaseName: grafana
-      valuesFiles:
-        - values.yml
+#      valuesFiles:
+#        - values.yml
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
