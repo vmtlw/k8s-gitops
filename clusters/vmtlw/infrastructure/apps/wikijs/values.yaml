@@ -1,9 +1,0 @@
-wikijs:
-  ingress:
-    annotations:
-      - cert-manager.io/cluster-issuer: "letsencrypt"
-    hosts:
-      - wiki.vmtlw.ru
-    tls:
-      - hosts:
-         - wiki.vmtlw.ru
