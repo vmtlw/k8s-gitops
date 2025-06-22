@@ -4,8 +4,6 @@ metadata:
   metadata:
   namespace: argocd
   name: wikijs
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io/resources
 spec:
   project: default
   source:
