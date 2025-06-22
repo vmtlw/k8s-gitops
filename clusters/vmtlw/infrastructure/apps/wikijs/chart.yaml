@@ -1,5 +1,5 @@
 apiVersion: v2
-name: wiki
+name: wikijs
 version: 1.0.0
 dependencies:
   - name: wiki
