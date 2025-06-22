@@ -6,4 +6,4 @@ wiki:
       - wiki.vmtlw.ru
     tls:
       - hosts:
-         - gitops.vmtlw.ru
+         - wiki.vmtlw.ru
