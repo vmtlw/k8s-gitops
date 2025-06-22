@@ -12,10 +12,12 @@ spec:
     repoURL: https://charts.js.wiki
     chart: wiki
     targetRevision: 2.2.23
+    path: clusters/vmtlw/infrastructure/apps/wikijs
     helm:
       releaseName: wikijs
       valueFiles:
         - values.yml
+      chart: .
   destination:
     server: https://kubernetes.default.svc
     namespace: wikijs
