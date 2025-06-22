@@ -1,6 +1,4 @@
 serverName: matrix.vmltlw.ru
-wellknown:
-  enabled: true
 
 ingress:
   annotations:
