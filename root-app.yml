@@ -7,8 +7,10 @@ spec:
   project: default
   source:
     repoURL: https://github.com/vmtlw/k8s-gitops.git
-    targetRevision: main
+    targetRevision: master
     path: clusters/vmtlw/infrastructure
+    directory:
+      recurse: true
   destination:
     server: https://kubernetes.default.svc
     namespace: argocd
