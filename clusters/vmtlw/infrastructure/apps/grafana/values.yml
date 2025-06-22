@@ -1,0 +1,12 @@
+ingress:
+  enabled: true
+  ingressClassName: nginx
+  annotations:
+    cert-manager.io/cluster-issuer: "letsencrypt"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
+  hosts:
+    - grafana.vmtlw.ru
+  tls:
+    - secretName: tls-secret
+      hosts:
+        - grafana.vmtlw.ru
