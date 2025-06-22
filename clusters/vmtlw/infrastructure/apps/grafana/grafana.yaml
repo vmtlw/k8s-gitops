@@ -11,14 +11,8 @@ spec:
     targetRevision: 9.2.7
     helm:
       releaseName: grafana
-      values: |
-        adminUser: admin
-        adminPassword: secret
-        persistence:
-          enabled: true
-          size: 10Gi
-        service:
-          type: ClusterIP
+      valuesFiles:
+        - values.yml
   destination:
     server: https://kubernetes.default.svc
     namespace: monitoring
