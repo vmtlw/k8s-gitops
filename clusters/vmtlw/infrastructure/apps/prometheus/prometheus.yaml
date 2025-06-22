@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: https://prometheus-community.github.io/helm-charts
     chart: prometheus
-    targetRevision: 
+    targetRevision: 27.21.0
     helm:
       releaseName: prometheus
   destination:
