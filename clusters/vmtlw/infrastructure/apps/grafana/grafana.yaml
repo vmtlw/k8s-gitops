@@ -7,7 +7,7 @@ spec:
   project: default
   source:
     repoURL: https://grafana.github.io/helm-charts
-    chart: bitnami/grafana
+    chart: grafana
     targetRevision: 12.0.8
     helm:
       releaseName: grafana
