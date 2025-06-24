@@ -1,6 +1,9 @@
 ---
 name: Validate YAML
 
+ignore: |
+  .github/*
+
 on:
   push:
     branches: [master]
