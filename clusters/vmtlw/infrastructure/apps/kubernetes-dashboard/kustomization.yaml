@@ -1,0 +1,11 @@
+resources:
+  - https://kubernetes.github.io/dashboard/kubernetes-dashboard-7.13.0.tgz  # будет проигнорировано, если используется helm-плагин
+  - rbac.yaml
+
+helmCharts:
+  - name: kubernetes-dashboard
+    repo: https://kubernetes.github.io/dashboard/
+    version: 7.13.0
+    releaseName: kubernetes-dashboard
+    namespace: kubernetes-dashboard
+    valuesFile: values.yaml
