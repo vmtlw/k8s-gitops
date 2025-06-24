@@ -14,6 +14,8 @@ spec:
     targetRevision: 7.13.0
     helm:
       releaseName: kubernetes-dashboard
+    valueFiles:
+      - values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: kubernetes-dashboard
