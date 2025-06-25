@@ -1,0 +1,9 @@
+server:
+  ingress:
+    enabled: true
+    hosts:
+      - monitoring.vmtlw.ru
+      secretName: tls-secret
+    annotations:
+      cert-manager.io/cluster-issuer: "letsencrypt"
+      nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
