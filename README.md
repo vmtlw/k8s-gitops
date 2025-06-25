@@ -1,3 +1,4 @@
+```
 helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
 echo $(kubectl get secret -n kubernetes-dashboard admin-user -o jsonpath="{.data.token}" | base64 -d)
@@ -47,3 +48,4 @@ virsh net-define /tmp/br0.xml
 virsh net-start br0
 virsh net-autostart br0
 virsh net-list --all
+```
