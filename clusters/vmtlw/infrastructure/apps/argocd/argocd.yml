@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   metadata:
-  name: argocd
+  name: argo-cd
   finalizers:
     - resources-finalizer.argocd.argoproj.io/resources
   namespace: argocd
@@ -13,12 +13,12 @@ spec:
     chart: argo-cd
     targetRevision: 8.1.1
     helm:
-      releaseName: argocd
+      releaseName: argo-cd
       valueFiles:
         - values.yml
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: argo-cd
   syncPolicy:
     automated:
       prune: true
