@@ -5,7 +5,7 @@ metadata:
   name: grafana
   finalizers:
     - resources-finalizer.argocd.argoproj.io
-  namespace: argocd
+  namespace: argo-cd
 spec:
   project: default
   source:

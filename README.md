@@ -7,10 +7,10 @@ added in kubespray
 helm repo add jetstack https://charts.jetstack.io --force-update
 helm install cert-manager --namespace cert-manager --version v1.18.1 jetstack/cert-manager --create-namespace
 
-kubectl create namespace argocd
+kubectl create namespace argo-cd
 helm repo add argo https://argoproj.github.io/argo-helm
 helm install argo-cd argo/argo-cd --version 8.1.1 --create-namespace --namespace argo-cd
-kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
+kubectl -n argo-cd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 
 helm repo add uptime-kuma https://dirsigler.github.io/uptime-kuma-helm
 helm install uptime-kuma uptime-kuma/uptime-kuma --version 2.21.3 --namespace uptime-kuma --create-namespace

@@ -5,7 +5,7 @@ metadata:
   name: kubernetes-dashboard
   finalizers:
     - resources-finalizer.argocd.argoproj.io/resources
-  namespace: argocd
+  namespace: argo-cd
 spec:
   project: default
   source:
