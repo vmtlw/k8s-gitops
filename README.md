@@ -2,12 +2,13 @@ helm repo add kubernetes-dashboard https://kubernetes.github.io/dashboard/
 helm upgrade --install kubernetes-dashboard kubernetes-dashboard/kubernetes-dashboard --create-namespace --namespace kubernetes-dashboard
 echo $(kubectl get secret -n kubernetes-dashboard admin-user -o jsonpath="{.data.token}" | base64 -d)
 
-# added in kubespray
-#helm repo add jetstack https://charts.jetstack.io --force-update
-#helm install cert-manager --namespace cert-manager --version v1.18.1 jetstack/cert-manager --create-namespace
+added in kubespray
+helm repo add jetstack https://charts.jetstack.io --force-update
+helm install cert-manager --namespace cert-manager --version v1.18.1 jetstack/cert-manager --create-namespace
 
 kubectl create namespace argocd
-kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+helm repo add argo https://argoproj.github.io/argo-helm
+helm install argo-cd argo/argo-cd --version 8.1.1 --create-namespace --namespace argo-cd
 kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.password}" | base64 -d
 
 helm repo add uptime-kuma https://dirsigler.github.io/uptime-kuma-helm
