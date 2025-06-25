@@ -10,7 +10,7 @@ spec:
   project: default
   source:
     repoURL: https://argoproj.github.io/argo-helm
-    chart: argocd
+    chart: argo-cd
     targetRevision: 8.1.1
     helm:
       releaseName: argocd
