@@ -48,4 +48,12 @@ virsh net-define /tmp/br0.xml
 virsh net-start br0
 virsh net-autostart br0
 virsh net-list --all
+
+# удалить вручную все диски из пула
+virsh vol-list default
+for vol in $(virsh vol-list default | awk 'NR>2 {print $1}'); do
+  virsh vol-delete "$vol" --pool default
+done
+
+
 ```
